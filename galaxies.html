@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Descobrir Galáxias</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .galaxies-header {
+            height: 50vh;
+            background: url('images/galaxy-field.jpg') center/cover fixed;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .galaxies-header::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(0deg, #0a0a20 0%, transparent 50%);
+        }
+
+        .galaxies-title {
+            font-size: 4em;
+            z-index: 2;
+            text-shadow: 0 0 30px rgba(147, 112, 219, 0.8);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .galaxy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            padding: 40px;
+            margin-top: -50px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .galaxy-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .galaxy-card:hover {
+            transform: translateY(-10px) rotate(1deg);
+            box-shadow: 0 0 30px rgba(147, 112, 219, 0.3);
+        }
+
+        .galaxy-image {
+            height: 250px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .galaxy-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .galaxy-card:hover .galaxy-image img {
+            transform: scale(1.1);
+        }
+
+        .galaxy-info {
+            padding: 25px;
+            text-align: center;
+        }
+
+        .galaxy-info h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-size: 1.8em;
+        }
+
+        .galaxy-info p {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 20px;
+        }
+
+        .explore-btn {
+            display: inline-block;
+            padding: 10px 25px;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .explore-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(0, 247, 255, 0.5);
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body class="content-page">
+    <nav class="top-nav">
+        <a href="index.html" class="back-btn">← Voltar</a>
+    </nav>
+
+    <div class="galaxies-header">
+        <h1 class="galaxies-title">Descobrir Galáxias</h1>
+    </div>
+
+    <div class="galaxy-grid">
+        <div class="galaxy-card">
+            <div class="galaxy-image">
+                <img src="images/milky-way.jpg" alt="Via Láctea">
+            </div>
+            <div class="galaxy-info">
+                <h3>Via Láctea</h3>
+                <p>Nossa galáxia natal</p>
+                <a href="milky-way.html" class="explore-btn">Saiba mais</a>
+            </div>
+        </div>
+
+        <div class="galaxy-card">
+            <div class="galaxy-image">
+                <img src="images/andromeda.jpg" alt="Andrômeda">
+            </div>
+            <div class="galaxy-info">
+                <h3>Andrômeda</h3>
+                <p>Nossa vizinha mais próxima</p>
+                <a href="andromeda.html" class="explore-btn">Saiba mais</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 

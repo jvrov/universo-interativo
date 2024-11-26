@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Andrômeda - Nossa Vizinha</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .andromeda-header {
+            height: 70vh;
+            background: url('images/andromeda-full.jpg') center/cover fixed;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .andromeda-header::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(0deg, #0a0a20 0%, transparent 50%);
+        }
+
+        .andromeda-title {
+            font-size: 5em;
+            z-index: 2;
+            text-shadow: 0 0 30px rgba(147, 112, 219, 0.8);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .timeline {
+            margin: 40px 0;
+            padding: 30px;
+            background: rgba(147, 112, 219, 0.1);
+            border-radius: 20px;
+            position: relative;
+        }
+
+        .timeline-event {
+            margin: 30px 0;
+            padding-left: 30px;
+            border-left: 2px solid rgba(147, 112, 219, 0.3);
+            position: relative;
+        }
+
+        .timeline-event::before {
+            content: '';
+            position: absolute;
+            left: -6px;
+            top: 0;
+            width: 10px;
+            height: 10px;
+            background: rgba(147, 112, 219, 0.8);
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body class="content-page">
+    <nav class="top-nav">
+        <a href="galaxies.html" class="back-btn">← Voltar</a>
+    </nav>
+
+    <div class="andromeda-header">
+        <h1 class="andromeda-title">Andrômeda</h1>
+    </div>
+
+    <div class="content">
+        <div class="fact-grid">
+            <div class="fact-card">
+                <h3>Distância</h3>
+                <p>2.537 milhões de anos-luz</p>
+            </div>
+            <div class="fact-card">
+                <h3>Tamanho</h3>
+                <p>220,000 anos-luz</p>
+            </div>
+        </div>
+
+        <article>
+            <h2>A Grande Vizinha</h2>
+            <p>Andrômeda é a galáxia espiral mais próxima da Via Láctea...</p>
+
+            <div class="timeline">
+                <h2>Colisão Futura</h2>
+            </div>
+        </article>
+    </div>
+</body>
+</html> 

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Saturno - O Senhor dos Anéis</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .saturn-header {
+            height: 70vh;
+            background: url('images/saturn-rings.jpg') center/cover fixed;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .saturn-header::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(0deg, #0a0a20 0%, transparent 50%);
+        }
+
+        .saturn-title {
+            font-size: 5em;
+            z-index: 2;
+            text-shadow: 0 0 30px rgba(218, 165, 32, 0.8);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .saturn-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: -100px 20px 0 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .saturn-stat-card {
+            background: rgba(218, 165, 32, 0.1);
+            border: 1px solid rgba(218, 165, 32, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease;
+        }
+
+        .saturn-stat-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 30px rgba(218, 165, 32, 0.3);
+        }
+
+        .rings-viewer {
+            height: 400px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            margin: 40px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .rings-viewer img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .rings-viewer:hover img {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body class="content-page">
+    <nav class="top-nav">
+        <a href="journey.html" class="back-btn">← Voltar</a>
+    </nav>
+
+    <div class="saturn-header">
+        <h1 class="saturn-title">Saturno</h1>
+    </div>
+
+    <div class="saturn-stats">
+        <div class="saturn-stat-card">
+            <h3>Diâmetro</h3>
+            <p>116,460 km</p>
+        </div>
+        <div class="saturn-stat-card">
+            <h3>Distância do Sol</h3>
+            <p>1.4 bilhão km</p>
+        </div>
+        <div class="saturn-stat-card">
+            <h3>Período Orbital</h3>
+            <p>29.5 anos</p>
+        </div>
+        <div class="saturn-stat-card">
+            <h3>Largura dos Anéis</h3>
+            <p>282,000 km</p>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="mars-section">
+            <h2>O Senhor dos Anéis</h2>
+            <p>Saturno é conhecido por seu impressionante sistema de anéis, que são compostos principalmente de partículas de gelo e rocha.</p>
+            
+            <div class="rings-viewer">
+                <img src="images/saturn-rings-detail.jpg" alt="Anéis de Saturno">
+            </div>
+        </div>
+    </div>
+</body>
+</html> 

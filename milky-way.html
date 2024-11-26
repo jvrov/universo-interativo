@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Via Láctea - Nossa Galáxia</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .milkyway-header {
+            height: 70vh;
+            background: url('images/milky-way-center.jpg') center/cover fixed;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .milkyway-header::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(0deg, #0a0a20 0%, transparent 50%);
+        }
+
+        .milkyway-title {
+            font-size: 5em;
+            z-index: 2;
+            text-shadow: 0 0 30px rgba(135, 206, 235, 0.8);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .galaxy-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: -100px 20px 0 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .galaxy-stat-card {
+            background: rgba(135, 206, 235, 0.1);
+            border: 1px solid rgba(135, 206, 235, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease;
+        }
+
+        .galaxy-stat-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 30px rgba(135, 206, 235, 0.3);
+        }
+
+        .galaxy-map {
+            height: 400px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            margin: 40px 0;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .galaxy-map img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .galaxy-map:hover img {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body class="content-page">
+    <nav class="top-nav">
+        <a href="galaxies.html" class="back-btn">← Voltar</a>
+    </nav>
+
+    <div class="milkyway-header">
+        <h1 class="milkyway-title">Via Láctea</h1>
+    </div>
+
+    <div class="galaxy-stats">
+        <div class="galaxy-stat-card">
+            <h3>Idade</h3>
+            <p>13.6 bilhões de anos</p>
+        </div>
+        <div class="galaxy-stat-card">
+            <h3>Diâmetro</h3>
+            <p>100,000 anos-luz</p>
+        </div>
+        <div class="galaxy-stat-card">
+            <h3>Estrelas</h3>
+            <p>200-400 bilhões</p>
+        </div>
+        <div class="galaxy-stat-card">
+            <h3>Tipo</h3>
+            <p>Espiral Barrada</p>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="mars-section">
+            <h2>Nossa Casa Cósmica</h2>
+            <p>A Via Láctea é nossa galáxia, um vasto sistema estelar que contém o Sistema Solar e bilhões de outras estrelas.</p>
+            
+            <div class="galaxy-map">
+                <img src="images/milky-way-map.jpg" alt="Mapa da Via Láctea">
+            </div>
+        </div>
+    </div>
+</body>
+</html> 

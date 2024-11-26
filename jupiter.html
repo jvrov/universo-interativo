@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Júpiter - O Gigante Gasoso</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .jupiter-header {
+            height: 70vh;
+            background: url('images/jupiter-surface.jpg') center/cover fixed;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .jupiter-header::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(0deg, #0a0a20 0%, transparent 50%);
+        }
+
+        .jupiter-title {
+            font-size: 5em;
+            z-index: 2;
+            text-shadow: 0 0 30px rgba(244, 170, 66, 0.8);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .jupiter-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: -100px 20px 0 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .jupiter-stat-card {
+            background: rgba(244, 170, 66, 0.1);
+            border: 1px solid rgba(244, 170, 66, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease;
+        }
+
+        .jupiter-stat-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 30px rgba(244, 170, 66, 0.3);
+        }
+
+        .moon-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .moon-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .moon-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .moon-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .moon-info {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body class="content-page">
+    <nav class="top-nav">
+        <a href="journey.html" class="back-btn">← Voltar</a>
+    </nav>
+
+    <div class="jupiter-header">
+        <h1 class="jupiter-title">Júpiter</h1>
+    </div>
+
+    <div class="jupiter-stats">
+        <div class="jupiter-stat-card">
+            <h3>Diâmetro</h3>
+            <p>139,820 km</p>
+        </div>
+        <div class="jupiter-stat-card">
+            <h3>Distância do Sol</h3>
+            <p>778.5 milhões km</p>
+        </div>
+        <div class="jupiter-stat-card">
+            <h3>Luas</h3>
+            <p>79 conhecidas</p>
+        </div>
+        <div class="jupiter-stat-card">
+            <h3>Período Orbital</h3>
+            <p>11.9 anos</p>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="mars-section">
+            <h2>O Gigante Gasoso</h2>
+            <p>Júpiter é o maior planeta do Sistema Solar e o quinto a partir do Sol. É um gigante gasoso com uma massa mais de duas vezes e meia a soma de todos os outros planetas do Sistema Solar.</p>
+        </div>
+
+        <div class="mars-section">
+            <h2>Principais Luas</h2>
+            <div class="moon-gallery">
+                <div class="moon-card">
+                    <img src="images/io.jpg" alt="Io">
+                    <div class="moon-info">
+                        <h3>Io</h3>
+                        <p>A lua mais vulcanicamente ativa do Sistema Solar</p>
+                    </div>
+                </div>
+                <div class="moon-card">
+                    <img src="images/europa.jpg" alt="Europa">
+                    <div class="moon-info">
+                        <h3>Europa</h3>
+                        <p>Possui um oceano líquido sob sua superfície gelada</p>
+                    </div>
+                </div>
+                <div class="moon-card">
+                    <img src="images/ganymede.jpg" alt="Ganímedes">
+                    <div class="moon-info">
+                        <h3>Ganímedes</h3>
+                        <p>A maior lua do Sistema Solar</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 

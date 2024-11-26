@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Marte - O Planeta Vermelho</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .mars-header {
+            height: 70vh;
+            background: url('images/mars-surface.jpg') center/cover fixed;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .mars-header::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(0deg, #0a0a20 0%, transparent 50%);
+        }
+
+        .mars-title {
+            font-size: 5em;
+            z-index: 2;
+            text-shadow: 0 0 30px rgba(255, 68, 0, 0.8);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .mars-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: -100px 20px 0 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .mars-stat-card {
+            background: rgba(255, 68, 0, 0.1);
+            border: 1px solid rgba(255, 68, 0, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease;
+        }
+
+        .mars-stat-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 30px rgba(255, 68, 0, 0.3);
+        }
+
+        .mars-content {
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        .mars-section {
+            margin: 40px 0;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+        }
+
+        .mars-section h2 {
+            color: #ff4400;
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+
+        .mars-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .mars-gallery img {
+            width: 100%;
+            border-radius: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .mars-gallery img:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="content-page">
+    <nav class="top-nav">
+        <a href="journey.html" class="back-btn">← Voltar</a>
+    </nav>
+
+    <div class="mars-header">
+        <h1 class="mars-title">Marte</h1>
+    </div>
+
+    <div class="mars-stats">
+        <div class="mars-stat-card">
+            <h3>Diâmetro</h3>
+            <p>6,779 km</p>
+        </div>
+        <div class="mars-stat-card">
+            <h3>Distância do Sol</h3>
+            <p>227.9 milhões km</p>
+        </div>
+        <div class="mars-stat-card">
+            <h3>Temperatura Média</h3>
+            <p>-63°C</p>
+        </div>
+        <div class="mars-stat-card">
+            <h3>Período Orbital</h3>
+            <p>687 dias</p>
+        </div>
+    </div>
+
+    <div class="mars-content">
+        <div class="mars-section">
+            <h2>O Planeta Vermelho</h2>
+            <p>Marte é o quarto planeta a partir do Sol e é frequentemente chamado de "Planeta Vermelho" devido à sua coloração característica causada pela grande quantidade de óxido de ferro em sua superfície.</p>
+        </div>
+
+        <div class="mars-section">
+            <h2>Exploração</h2>
+            <p>Várias missões já foram enviadas a Marte, incluindo os rovers Curiosity e Perseverance, que continuam explorando a superfície do planeta em busca de sinais de vida antiga.</p>
+            <div class="mars-gallery">
+                <img src="images/mars-rover.jpg" alt="Rover em Marte">
+                <img src="images/mars-surface.jpg" alt="Superfície de Marte">
+                <img src="images/mars-canyon.jpg" alt="Cânion em Marte">
+            </div>
+        </div>
+
+        <div class="mars-section">
+            <h2>Colonização</h2>
+            <p>Marte é considerado um dos principais candidatos para futura colonização humana, com várias agências espaciais e empresas privadas planejando missões tripuladas para as próximas décadas.</p>
+        </div>
+    </div>
+</body>
+</html> 

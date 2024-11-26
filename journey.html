@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jornada Espacial</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .journey-header {
+            height: 50vh;
+            background: url('images/space-journey.jpg') center/cover fixed;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .journey-header::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(0deg, #0a0a20 0%, transparent 50%);
+        }
+
+        .journey-title {
+            font-size: 4em;
+            z-index: 2;
+            text-shadow: 0 0 30px rgba(0, 247, 255, 0.8);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .planet-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 40px;
+            margin-top: -50px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .planet-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .planet-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 30px rgba(0, 247, 255, 0.3);
+        }
+
+        .planet-image {
+            height: 200px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .planet-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .planet-card:hover .planet-image img {
+            transform: scale(1.1);
+        }
+
+        .planet-info {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .planet-info h3 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-size: 1.5em;
+        }
+
+        .planet-info p {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 20px;
+        }
+
+        .explore-btn {
+            display: inline-block;
+            padding: 10px 25px;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .explore-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(0, 247, 255, 0.5);
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body class="content-page">
+    <nav class="top-nav">
+        <a href="index.html" class="back-btn">← Voltar</a>
+    </nav>
+
+    <div class="journey-header">
+        <h1 class="journey-title">Jornada Espacial</h1>
+    </div>
+
+    <div class="planet-grid">
+        <div class="planet-card">
+            <div class="planet-image">
+                <img src="images/mars.jpg" alt="Marte">
+            </div>
+            <div class="planet-info">
+                <h3>Marte</h3>
+                <p>O Planeta Vermelho aguarda sua exploração</p>
+                <a href="mars.html" class="explore-btn">Explorar</a>
+            </div>
+        </div>
+
+        <div class="planet-card">
+            <div class="planet-image">
+                <img src="images/jupiter.jpg" alt="Júpiter">
+            </div>
+            <div class="planet-info">
+                <h3>Júpiter</h3>
+                <p>O maior planeta do Sistema Solar</p>
+                <a href="jupiter.html" class="explore-btn">Explorar</a>
+            </div>
+        </div>
+
+        <div class="planet-card">
+            <div class="planet-image">
+                <img src="images/saturn.jpg" alt="Saturno">
+            </div>
+            <div class="planet-info">
+                <h3>Saturno</h3>
+                <p>O senhor dos anéis</p>
+                <a href="saturn.html" class="explore-btn">Explorar</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 
